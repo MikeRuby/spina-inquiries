@@ -1,5 +1,5 @@
 Spina::Engine.routes.draw do
-  namespace :admin do
+  namespace :admin, path: Spina.config.backend_path do
     resources :inquiries, only: [:index, :show, :destroy] do
       collection do
         get :inbox
